@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Share_Chance
-//
-//  Created by 石垣達樹 on 2017/12/12.
-//  Copyright © 2017年 ishitatsu. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

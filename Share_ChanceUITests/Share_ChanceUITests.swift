@@ -1,14 +1,14 @@
 //
-//  Share_ChanceUITests.swift
-//  Share_ChanceUITests
+//  ShareChanceUITests.swift
+//  ShareChanceUITests
 //
-//  Created by 石垣達樹 on 2017/12/12.
+//  Created by 石垣達樹 on 2017/11/30.
 //  Copyright © 2017年 ishitatsu. All rights reserved.
 //
 
 import XCTest
 
-class Share_ChanceUITests: XCTestCase {
+class ShareChanceUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
