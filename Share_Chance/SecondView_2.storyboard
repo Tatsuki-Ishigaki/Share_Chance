@@ -13,7 +13,7 @@
         <!--Secound2 View Controller-->
         <scene sceneID="zNu-z9-AnR">
             <objects>
-                <viewController id="AmB-XZ-6UB" customClass="Secound_2ViewController" customModule="Share_ChanceTests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AmB-XZ-6UB" customClass="Secound_2ViewController" customModule="Share_Chance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dm6-2O-RAA">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="最初の画面に戻る"/>
                                 <connections>
-                                    <segue destination="Hzh-Lm-lp5" kind="unwind" unwindAction="goBack:" id="cFf-8S-QdE"/>
+                                    <segue destination="Hzh-Lm-lp5" kind="unwind" unwindAction="goBack:" id="IyV-kv-RF3"/>
                                 </connections>
                             </button>
                         </subviews>

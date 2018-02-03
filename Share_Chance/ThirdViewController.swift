@@ -1,17 +1,81 @@
-import UIKit
+//ThirdViewController
 
-class ThirdViewController: UIViewController {
+import UIKit
+import RealmSwift
+
+class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var item: Results<Item>!
+    var realm: Realm!
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.estimatedRowHeight = 50 //見積もり高さ
+        tableView.rowHeight = UITableViewAutomaticDimension //自動設定
+        
+        do{
+            let realm = try Realm()
+            item = realm.objects(Item.self).sorted(byKeyPath: "title").sorted(byKeyPath: "category").sorted(byKeyPath: "like")
+            
+        }catch{
+    
+        }
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return item.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! myTableViewCell
+        
+        
+        cell.Label1.text = item[indexPath.row].title
+        cell.Label2.text = item[indexPath.row].category
+        cell.Label3.text = item[indexPath.row].like
+        
+        //cell.textLabel?.text = item[indexPath.row].title
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == UITableViewCellEditingStyle.delete) {
+            do{
+                let realm = try Realm()
+                try realm.write {
+                    realm.delete(self.item[indexPath.row])
+                }
+                tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+            }catch{
+            }
+            self.tableView.reloadData()
+        }
     }
 }

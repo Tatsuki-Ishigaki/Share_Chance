@@ -1,7 +1,13 @@
+//SecondViewController
+
+
 import UIKit
+import RealmSwift
 
 class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate,UITextFieldDelegate{
     
+    var realm: Realm!
+
     let pickerView = UIPickerView()
     
     var editingTextField: UITextField!
@@ -23,6 +29,23 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     @IBAction func goSegue1(_ sender:UIButton) {
         performSegue(withIdentifier: "Button", sender: nil)
+        
+        let item = Item()
+        
+        item.title = Text.text!
+        item.category = pickerTextField.text!
+        item.like = pickerTextField2.text!
+        
+        do{
+            let realm = try Realm()
+            try realm.write({ () -> Void in
+                realm.add(item)
+                print("Saved")
+                print(Realm.Configuration.defaultConfiguration.fileURL!)
+            })
+        }catch{
+            print("Save is Faild")
+        }
         
         Text.text = ""
         pickerTextField.text = ""
@@ -58,16 +81,15 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         pickerTextField2.delegate = self
         pickerTextField2.inputView = pickerView
         pickerTextField2.inputAccessoryView = toolBar
-    
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-       editingTextField = textField
+        editingTextField = textField
         pickerView.reloadAllComponents()
     }
     
@@ -109,7 +131,7 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     @objc func canclePressed(sender: UIBarButtonItem) {
         if editingTextField == pickerTextField {
-           pickerTextField.text = ""
+            pickerTextField.text = ""
         } else if editingTextField == pickerTextField2 {
             pickerTextField2.text = ""
         }
@@ -127,4 +149,3 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
 }
-

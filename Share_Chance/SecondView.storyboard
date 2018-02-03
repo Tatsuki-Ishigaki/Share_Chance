@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Second View Controller-->
         <scene sceneID="ecs-iM-2yT">
             <objects>
-                <viewController id="4nM-AO-scG" customClass="SecondViewController" customModule="Share_ChanceTests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4nM-AO-scG" customClass="SecondViewController" customModule="Share_Chance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tIs-4n-eId" userLabel="view">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="登録完了"/>
                                 <connections>
-                                    <action selector="goSegue1:" destination="4nM-AO-scG" eventType="touchUpInside" id="kUE-uu-0Pg"/>
+                                    <action selector="goSegue1:" destination="4nM-AO-scG" eventType="touchUpInside" id="ZYX-vE-d3D"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="33" translatesAutoresizingMaskIntoConstraints="NO" id="VrR-CN-32U">
@@ -89,26 +89,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nqf-2J-x3W"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Wp7-Gl-AYD"/>
                     <navigationItem key="navigationItem" id="vdw-oB-edu"/>
                     <connections>
-                        <outlet property="Text" destination="efx-hP-TaH" id="I5Z-WQ-MXy"/>
-                        <outlet property="pickerTextField" destination="VrR-CN-32U" id="2f2-LV-Mgw"/>
-                        <outlet property="pickerTextField2" destination="nPt-hm-ofb" id="75J-Kl-uQ2"/>
-                        <segue destination="WET-Iz-We7" kind="showDetail" identifier="Button" id="AFC-d1-FVB"/>
+                        <outlet property="Text" destination="efx-hP-TaH" id="lsH-sJ-dmI"/>
+                        <outlet property="pickerTextField" destination="VrR-CN-32U" id="Hn6-gc-5eN"/>
+                        <outlet property="pickerTextField2" destination="nPt-hm-ofb" id="8Lu-yW-2vi"/>
+                        <segue destination="AYk-1B-dVC" kind="show" identifier="Button" id="4Ar-Qs-32I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o36-Mx-bqQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1.5625" y="757.6171875"/>
+            <point key="canvasLocation" x="164.0625" y="757.6171875"/>
         </scene>
         <!--SecondView_2-->
-        <scene sceneID="x2b-kK-jw1">
+        <scene sceneID="qeb-ZB-VdP">
             <objects>
-                <viewControllerPlaceholder storyboardName="SecondView_2" id="WET-Iz-We7" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i2V-Ze-9WF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="SecondView_2" id="AYk-1B-dVC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sc5-8u-GZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="745"/>
+            <point key="canvasLocation" x="856" y="804"/>
         </scene>
     </scenes>
 </document>

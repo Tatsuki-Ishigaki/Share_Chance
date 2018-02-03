@@ -31,7 +31,7 @@
         <scene sceneID="9Wi-cN-SmG">
             <objects>
                 <viewControllerPlaceholder storyboardName="First_View" id="qd1-k3-LOP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="exY-bg-rgh"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="first" id="exY-bg-rgh"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gj0-i2-zkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +41,7 @@
         <scene sceneID="DZa-0s-0Zh">
             <objects>
                 <viewControllerPlaceholder storyboardName="SecondView" id="Y4F-nz-dfJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="fxn-pU-Mfw"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="second" id="fxn-pU-Mfw"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jm0-aD-rzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,4 +58,8 @@
             <point key="canvasLocation" x="645" y="201"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
 </document>
