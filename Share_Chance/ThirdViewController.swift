@@ -20,19 +20,17 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         do{
             let realm = try Realm()
-            item = realm.objects(Item.self).sorted(byKeyPath: "title").sorted(byKeyPath: "category").sorted(byKeyPath: "like")
+            item = realm.objects(Item.self).sorted(byKeyPath: "title")
             
         }catch{
     
         }
-        
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,14 +47,17 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! myTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
         
+        let label1 = cell.viewWithTag(1) as! UILabel
+        label1.text = item[indexPath.row].title
         
-        cell.Label1.text = item[indexPath.row].title
-        cell.Label2.text = item[indexPath.row].category
-        cell.Label3.text = item[indexPath.row].like
+        let label2 = cell.viewWithTag(2) as! UILabel
+        label2.text = item[indexPath.row].category
         
-        //cell.textLabel?.text = item[indexPath.row].title
+        let label3 = cell.viewWithTag(3) as! UILabel
+        label3.text = item[indexPath.row].like
+        
         
         return cell
     }

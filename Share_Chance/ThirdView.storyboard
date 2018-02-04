@@ -5,11 +5,12 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Third View Controller-->
+        <!--好きなもの登録リスト-->
         <scene sceneID="Oqv-Q2-HNi">
             <objects>
                 <viewController id="Zum-JN-xjn" customClass="ThirdViewController" customModule="Share_Chance" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,41 +25,103 @@
                                     <constraint firstAttribute="width" constant="768" id="pd9-SO-ygl"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="90" id="xPl-TF-40N" customClass="myTableViewCell" customModule="Share_Chance" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="768" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="30" reuseIdentifier="cell" rowHeight="121" id="xPl-TF-40N">
+                                        <rect key="frame" x="0.0" y="28" width="768" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xPl-TF-40N" id="Nw2-mr-E2U">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="120.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoZ-n7-Yiv">
-                                                    <rect key="frame" x="15" y="0.0" width="371" height="51"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5y-aM-tLX">
+                                                    <rect key="frame" x="156" y="59" width="143" height="51"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="143" id="Ict-qI-PXE"/>
+                                                        <constraint firstAttribute="height" constant="51" id="MoM-7F-o0g"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Like" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6Y-rb-Gr3">
-                                                    <rect key="frame" x="591" y="-13" width="143" height="64"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ncJ-28-pEX">
+                                                    <rect key="frame" x="41.5" y="9.5" width="99" height="31.5"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="好きなもの">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="21" name=".HiraKakuInterface-W3"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eTG-zB-RZH">
+                                                    <rect key="frame" x="48" y="69" width="86" height="30"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="カテゴリ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="21" name=".HiraKakuInterface-W3"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoZ-n7-Yiv">
+                                                    <rect key="frame" x="140" y="1" width="500" height="51"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="500" id="Ab4-SI-BQZ"/>
+                                                        <constraint firstAttribute="height" constant="51" id="KkB-W3-Sdd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5y-aM-tLX">
-                                                    <rect key="frame" x="394" y="-6" width="143" height="51"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ul-05-Ycc">
+                                                    <rect key="frame" x="462" y="69" width="59" height="30"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="好感度">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="21" name=".HiraKakuInterface-W3"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ta-ob-0BQ">
+                                                    <rect key="frame" x="546" y="59" width="207" height="51"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="51" id="8id-go-pOp"/>
+                                                        <constraint firstAttribute="width" constant="207" id="B7G-4i-rBh"/>
+                                                        <constraint firstAttribute="height" constant="51" id="lFH-vG-bZK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eTG-zB-RZH" firstAttribute="top" secondItem="5ul-05-Ycc" secondAttribute="top" id="2Cr-op-eVL"/>
+                                                <constraint firstItem="7Ta-ob-0BQ" firstAttribute="leading" secondItem="5ul-05-Ycc" secondAttribute="trailing" constant="25" id="BWS-9d-vcg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eTG-zB-RZH" secondAttribute="bottom" constant="11" id="H41-Zz-MLS"/>
+                                                <constraint firstItem="eTG-zB-RZH" firstAttribute="leading" secondItem="Nw2-mr-E2U" secondAttribute="leadingMargin" constant="33" id="SUd-kE-TNH"/>
+                                                <constraint firstItem="GoZ-n7-Yiv" firstAttribute="top" secondItem="Nw2-mr-E2U" secondAttribute="top" constant="1" id="YVo-gO-HdI"/>
+                                                <constraint firstItem="D5y-aM-tLX" firstAttribute="leading" secondItem="Nw2-mr-E2U" secondAttribute="leadingMargin" constant="141" id="ZcI-md-zpH"/>
+                                                <constraint firstItem="eTG-zB-RZH" firstAttribute="top" secondItem="ncJ-28-pEX" secondAttribute="bottom" constant="28" id="eTm-Ec-BJb"/>
+                                                <constraint firstItem="7Ta-ob-0BQ" firstAttribute="centerY" secondItem="eTG-zB-RZH" secondAttribute="centerY" id="ho1-Lm-EO8"/>
+                                                <constraint firstItem="D5y-aM-tLX" firstAttribute="top" secondItem="GoZ-n7-Yiv" secondAttribute="bottom" constant="7" id="i7l-Uv-auh"/>
+                                                <constraint firstItem="eTG-zB-RZH" firstAttribute="centerX" secondItem="ncJ-28-pEX" secondAttribute="centerX" id="pKh-RD-E7m"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7Ta-ob-0BQ" secondAttribute="trailing" id="rF5-tZ-QsP"/>
+                                                <constraint firstItem="D5y-aM-tLX" firstAttribute="leading" secondItem="eTG-zB-RZH" secondAttribute="trailing" constant="22" id="rOz-5p-ft9"/>
+                                                <constraint firstItem="GoZ-n7-Yiv" firstAttribute="leading" secondItem="Nw2-mr-E2U" secondAttribute="leadingMargin" constant="125" id="sIR-IA-Ftu"/>
+                                                <constraint firstItem="7Ta-ob-0BQ" firstAttribute="centerY" secondItem="5ul-05-Ycc" secondAttribute="centerY" id="t8f-IF-NVv"/>
+                                                <constraint firstItem="7Ta-ob-0BQ" firstAttribute="baseline" secondItem="D5y-aM-tLX" secondAttribute="baseline" id="tbc-1p-owP"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="Label1" destination="GoZ-n7-Yiv" id="JmV-ih-Fe9"/>
-                                            <outlet property="Label2" destination="D5y-aM-tLX" id="1f2-IN-cPe"/>
-                                            <outlet property="Label3" destination="S6Y-rb-Gr3" id="fIt-MB-UFT"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -71,7 +134,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2yv-rq-h4z"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bBg-HW-d6u"/>
+                    <navigationItem key="navigationItem" title="好きなもの登録リスト" id="bBg-HW-d6u" userLabel="wcl；え"/>
                     <connections>
                         <outlet property="tableView" destination="CoU-MR-2KV" id="y7B-ji-74C"/>
                     </connections>

@@ -28,7 +28,6 @@
 		BAB208201FDF906100002D03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB2081F1FDF906100002D03 /* AppDelegate.swift */; };
 		BAB208291FDF906100002D03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB208281FDF906100002D03 /* Assets.xcassets */; };
 		BAB208371FDF906100002D03 /* Share_ChanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB208361FDF906100002D03 /* Share_ChanceTests.swift */; };
-		BABE8EE52025DED100D453B6 /* myTableViewCell copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE8EE42025DED100D453B6 /* myTableViewCell copy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +74,6 @@
 		BAB208361FDF906100002D03 /* Share_ChanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share_ChanceTests.swift; sourceTree = "<group>"; };
 		BAB208381FDF906100002D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAB2083D1FDF906100002D03 /* Share_ChanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Share_ChanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BABE8EE42025DED100D453B6 /* myTableViewCell copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "myTableViewCell copy.swift"; sourceTree = "<group>"; };
 		CF9505F807B5E3C571A54A0C /* Pods-Share_Chance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share_Chance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Share_Chance/Pods-Share_Chance.debug.xcconfig"; sourceTree = "<group>"; };
 		DF30A09A4F010352766805AF /* Pods-Share_Chance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share_Chance.release.xcconfig"; path = "Pods/Target Support Files/Pods-Share_Chance/Pods-Share_Chance.release.xcconfig"; sourceTree = "<group>"; };
 		EC260A077B66289A8481E6F9 /* Pods_Share_Chance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Share_Chance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,7 +150,6 @@
 				BA3298B82022A73000C0B71B /* SecondViewController.swift */,
 				BA3298C22022A73D00C0B71B /* SecondView_2Controller.swift */,
 				BA3298BA2022A73100C0B71B /* ThirdViewController.swift */,
-				BABE8EE42025DED100D453B6 /* myTableViewCell copy.swift */,
 				BA826D052022EFC8007C96AC /* Data.swift */,
 				BA826D002022B0F9007C96AC /* First_View.storyboard */,
 				BA3298C42022A73D00C0B71B /* SecondView.storyboard */,
@@ -489,7 +486,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA3298CD2022A82600C0B71B /* FirstViewController.swift in Sources */,
-				BABE8EE52025DED100D453B6 /* myTableViewCell copy.swift in Sources */,
 				BA826D062022EFC9007C96AC /* Data.swift in Sources */,
 				BA3298CC2022A82600C0B71B /* SecondViewController.swift in Sources */,
 				BAB208201FDF906100002D03 /* AppDelegate.swift in Sources */,
