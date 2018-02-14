@@ -7,7 +7,12 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var item: Results<Item>!
     var realm: Realm!
     
+    var itemTitle: String?
+    var itemCategory: String?
+    var itemLike: String?
+    
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func goBack2(_ segue:UIStoryboardSegue) {}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +25,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         do{
             let realm = try Realm()
-            item = realm.objects(Item.self).sorted(byKeyPath: "title")
+            item = realm.objects(Item.self).sorted(byKeyPath: "like")
             
         }catch{
     
@@ -35,13 +40,19 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
+        super.viewWillAppear(animated)
+        if let selectedRaw = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selectedRaw, animated: true)
+        }
     }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(item.count)
         return item.count
     }
     
@@ -79,4 +90,29 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
             self.tableView.reloadData()
         }
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        itemTitle = item[indexPath.item].title
+        itemCategory = item[indexPath.item].category
+        itemLike = item[indexPath.item].like
+        
+        if itemTitle != nil {
+            // SubViewController へ遷移するために Segue を呼び出す
+            performSegue(withIdentifier: "Third_2",sender: nil)
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "Third_2") {
+            let nav = segue.destination as! UINavigationController
+            let Third_2VC1 = nav.topViewController as! ThirdView_2Controller
+            let Third_2VC2 = nav.topViewController as! ThirdView_2Controller
+            let Third_2VC3 = nav.topViewController as! ThirdView_2Controller
+            
+            Third_2VC1.itemTitle = itemTitle
+            Third_2VC2.itemCategory = itemCategory
+            Third_2VC3.itemLike = itemLike
+        }
+    }
+
 }

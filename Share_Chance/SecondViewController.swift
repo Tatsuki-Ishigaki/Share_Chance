@@ -12,7 +12,7 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     var editingTextField: UITextField!
     
-    var pickOption = ["自動車", "仕事", "音楽", "スポーツ", "テレビ"]
+    var pickOption = ["テレビ", "音楽", "スポーツ","芸能人","その他"]
     
     var pickOption2 = ["ちょっと好き", "好き", "とても好き", "1番好き", "愛してる"]
     
@@ -36,10 +36,19 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         item.category = pickerTextField.text!
         item.like = pickerTextField2.text!
         
+        let my_id = Id()
+        my_id.id = "9999"
+    
+        let my_inf = My_Information()
+        my_inf.name = "Tatsuki"
+        my_inf.pr = "よろしく"
+        
         do{
             let realm = try Realm()
             try realm.write({ () -> Void in
                 realm.add(item)
+                realm.add(my_id)
+                realm.add(my_inf)
                 print("Saved")
                 print(Realm.Configuration.defaultConfiguration.fileURL!)
             })
@@ -81,6 +90,7 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         pickerTextField2.delegate = self
         pickerTextField2.inputView = pickerView
         pickerTextField2.inputAccessoryView = toolBar
+        
         
     }
     

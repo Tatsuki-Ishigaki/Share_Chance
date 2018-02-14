@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="epB-Nd-VjN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="387-mT-7DC">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--好きなもの登録リスト-->
+        <!--Third View Controller-->
         <scene sceneID="Oqv-Q2-HNi">
             <objects>
                 <viewController id="Zum-JN-xjn" customClass="ThirdViewController" customModule="Share_Chance" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CoU-MR-2KV">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CoU-MR-2KV">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="768" id="pd9-SO-ygl"/>
@@ -134,36 +135,43 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2yv-rq-h4z"/>
                     </view>
-                    <navigationItem key="navigationItem" title="好きなもの登録リスト" id="bBg-HW-d6u" userLabel="wcl；え"/>
+                    <navigationItem key="navigationItem" id="bBg-HW-d6u" userLabel="wcl；え"/>
                     <connections>
                         <outlet property="tableView" destination="CoU-MR-2KV" id="y7B-ji-74C"/>
+                        <segue destination="lfg-6y-Jn1" kind="show" identifier="Third_2" id="FFL-SN-1ul"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYa-9j-qSL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1792.96875" y="-0.5859375"/>
+            <point key="canvasLocation" x="1958.59375" y="-0.5859375"/>
         </scene>
-        <!--Third-->
-        <scene sceneID="PVz-cx-Cvz">
+        <!--ThirdView_2-->
+        <scene sceneID="MaW-h8-YCn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="epB-Nd-VjN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Third" image="second" id="puP-WS-2hY"/>
+                <viewControllerPlaceholder storyboardName="ThirdView_2" id="lfg-6y-Jn1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gM2-OC-X4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2652" y="-1"/>
+        </scene>
+        <!--マッチング-->
+        <scene sceneID="epa-mU-D2e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="387-mT-7DC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="マッチング" id="uc7-2D-uHe"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7OO-G8-lUl">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QPJ-oE-uck">
                         <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Zum-JN-xjn" kind="relationship" relationship="rootViewController" id="2gN-68-u2K"/>
+                        <segue destination="Zum-JN-xjn" kind="relationship" relationship="rootViewController" id="Xnj-2v-McT"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jc9-Qd-dJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aK7-s0-3Dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="762" y="-1"/>
+            <point key="canvasLocation" x="1163" y="-1"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="second" width="30" height="30"/>
-    </resources>
 </document>

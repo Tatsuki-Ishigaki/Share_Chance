@@ -1,0 +1,6 @@
+framework module Pods_Share_ChanceTests {
+  umbrella header "Pods-Share_ChanceTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
