@@ -13,7 +13,7 @@ class Information: Object {
     @objc dynamic var name = ""
     @objc dynamic var mach = ""
     @objc dynamic var pr = ""
-    @objc dynamic var flag: Int = 0
+    @objc dynamic var flag = ""
 }
 
 class My_Information: Object {

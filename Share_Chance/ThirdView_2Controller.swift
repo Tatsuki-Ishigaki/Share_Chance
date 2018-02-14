@@ -101,7 +101,7 @@ class ThirdView_2Controller: UIViewController {
     
     @objc func Scan(){
         
-        let id = my_id[0].id
+        let id = my_id[0].my_id
         
         let name = inf[0].name
         

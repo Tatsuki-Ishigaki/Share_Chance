@@ -1,4 +1,3 @@
-//ThirdViewController
 
 import UIKit
 import RealmSwift
@@ -26,7 +25,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         do{
             let realm = try Realm()
             item = realm.objects(Item.self).sorted(byKeyPath: "like")
-            
+
         }catch{
     
         }
@@ -52,7 +51,6 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(item.count)
         return item.count
     }
     
@@ -98,7 +96,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         itemLike = item[indexPath.item].like
         
         if itemTitle != nil {
-            // SubViewController へ遷移するために Segue を呼び出す
+            
             performSegue(withIdentifier: "Third_2",sender: nil)
         }
     }

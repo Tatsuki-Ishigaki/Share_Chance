@@ -193,6 +193,7 @@ extension ServiceCentralManager: CBCentralManagerDelegate, CBPeripheralDelegate 
             inf.name = arr2[4]
             inf.mach = arr2[0]
             inf.pr = arr2[5]
+            inf.flag = "0"
             
             do{
                 let realm = try Realm()

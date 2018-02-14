@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Secound2 View Controller-->
+        <!--Item-->
         <scene sceneID="zNu-z9-AnR">
             <objects>
                 <viewController id="AmB-XZ-6UB" customClass="Secound_2ViewController" customModule="Share_Chance" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,6 +47,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z1G-Uj-vWv"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="lcV-gr-hlh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alv-uz-jxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Hzh-Lm-lp5" userLabel="Exit" sceneMemberID="exit"/>

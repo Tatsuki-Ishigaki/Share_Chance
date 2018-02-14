@@ -7,6 +7,9 @@ target 'Share_Chance' do
 
   # Pods for Share_Chance
 	pod 'RealmSwift'
+	pod 'Firebase/Core'
+	pod 'Firebase/Database'
+  	pod 'Firebase/Auth'
 
   target 'Share_ChanceTests' do
     inherit! :search_paths

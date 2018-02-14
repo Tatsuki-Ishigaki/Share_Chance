@@ -1,10 +1,3 @@
-//
-//  FirstViewController.swift
-//  ShareChance
-//
-//  Created by 石垣達樹 on 2017/11/30.
-//  Copyright © 2017年 ishitatsu. All rights reserved.
-//
 
 import UIKit
 import RealmSwift
@@ -12,9 +5,22 @@ import RealmSwift
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var information: Results<Information>!
+    var id: Results<Id>!
+    var My_inf: Results<My_Information>!
+    
     var realm: Realm!
     
+    var my_name: String?
+    var you_name: String?
+    var my_id: String?
+    var you_id: String?
+    var mix_id: String?
+    var my_pr: String?
+    var flag: String?
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBAction func goSegue3(segue: UIStoryboardSegue) {}
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +33,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         do{
             let realm = try Realm()
-            information = realm.objects(Information.self)
-            
+            information = realm.objects(Information.self).sorted(byKeyPath: "id")
+            id = realm.objects(Id.self)
+            My_inf = realm.objects(My_Information.self)
         }catch{
             
         }
@@ -62,7 +69,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         label1.text = information[indexPath.row].name
         
         let label2 = cell.viewWithTag(2) as! UILabel
-        label2.text = information[indexPath.row].id
+        label2.text = information[indexPath.row].mach
         
         
         
@@ -84,6 +91,43 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }catch{
             }
             self.tableView.reloadData()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        my_name = My_inf[0].name
+        you_name = information[indexPath.item].name
+        my_id  = id[0].my_id
+        you_id = information[indexPath.item].you_id
+        mix_id = information[indexPath.item].id
+        my_pr = My_inf[0].pr
+        flag = information[indexPath.item].flag
+        
+
+        performSegue(withIdentifier: "First_2",sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "First_2") {
+//            let nav = segue.destination as! UINavigationController
+            
+//            let First_2VC1 = nav.topViewController as! FirstView_2Controller
+//            let First_2VC2 = nav.topViewController as! FirstView_2Controller
+//            let First_2VC3 = nav.topViewController as! FirstView_2Controller
+//            let First_2VC4 = nav.topViewController as! FirstView_2Controller
+//            let First_2VC5 = nav.topViewController as! FirstView_2Controller
+//            let First_2VC6 = nav.topViewController as! FirstView_2Controller
+//            let First_2VC7 = nav.topViewController as! FirstView_2Controller
+//
+//
+//            First_2VC1.my_name = my_name
+//            First_2VC2.you_name = you_name
+//            First_2VC3.my_id = my_id
+//            First_2VC4.you_id = you_id
+//            First_2VC5.mix_id = mix_id
+//            First_2VC6.my_pr = my_pr
+//            First_2VC7.flag = flag
+            
+            
         }
     }
     

@@ -37,10 +37,10 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         item.like = pickerTextField2.text!
         
         let my_id = Id()
-        my_id.id = "9999"
+        my_id.my_id = "8888"
     
         let my_inf = My_Information()
-        my_inf.name = "Tatsuki"
+        my_inf.name = "Test"
         my_inf.pr = "よろしく"
         
         do{

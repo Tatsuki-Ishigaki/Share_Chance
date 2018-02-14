@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zhB-6Y-hr2">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TutorialViewController-->
+        <scene sceneID="pfh-dO-idv">
+            <objects>
+                <pageViewController storyboardIdentifier="TutorialViewController" autoresizesArchivedViewToFullSize="NO" title="TutorialViewController" modalTransitionStyle="partialCurl" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zhB-6Y-hr2" customClass="TutorialViewController" customModule="ShareChance" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSa-xg-9Ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-578" y="915"/>
+        </scene>
+        <!--TutorialViewControllerFirst-->
+        <scene sceneID="1Ku-AA-F80">
+            <objects>
+                <viewController storyboardIdentifier="TutorialViewControllerFirst" title="TutorialViewControllerFirst" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dR3-n1-1DX" customClass="TutorialViewControllerFirst" customModule="ShareChance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="94V-mi-72g">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hKD-s8-AJL">
+                                <rect key="frame" x="177" y="99" width="414" height="424"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ようこそ、ShareChanceへ！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdK-3N-Zim">
+                                <rect key="frame" x="0.0" y="574" width="768" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.091312550008296967" green="0.10647360235452652" blue="0.57860672473907471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ohQ-8j-sO5">
+                                <rect key="frame" x="89" y="690" width="584" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">街中ですれ違う
+同じ趣味を持つ人と
+やり取りができるアプリです。</string>
+                                <color key="textColor" red="0.091312550008296967" green="0.10647360235452652" blue="0.57860672473907471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="swipe" translatesAutoresizingMaskIntoConstraints="NO" id="6my-96-DVQ">
+                                <rect key="frame" x="630" y="887" width="118" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lA3-4V-29q"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="hKD-s8-AJL" id="hyI-iG-3TB"/>
+                        <outlet property="swipe" destination="6my-96-DVQ" id="aJR-o2-EgD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r82-pO-wcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="193.75" y="914.64843749999989"/>
+        </scene>
+        <!--TutorialViewControllerSecond-->
+        <scene sceneID="qLZ-B5-B71">
+            <objects>
+                <viewController storyboardIdentifier="TutorialViewControllerSecond" title="TutorialViewControllerSecond" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qFF-Bv-H3m" customClass="TutorialViewControllerSecond" customModule="ShareChance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k6X-jM-plb">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32l-VC-gEE">
+                                <rect key="frame" x="177" y="99" width="414" height="424"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="使い方は、すれ違うだけ。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wk-7u-0Ft">
+                                <rect key="frame" x="0.0" y="575" width="768" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.090919189155101776" green="0.5187186598777771" blue="0.098680071532726288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="133-qT-MMX">
+                                <rect key="frame" x="92" y="679" width="584" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">最初に必要事項を登録をすれば、
+後はすれ違うだけ。
+同じ趣味の人を簡単に見つけられます。</string>
+                                <color key="textColor" red="0.090919189155101776" green="0.5187186598777771" blue="0.098680071532726288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="swipe" translatesAutoresizingMaskIntoConstraints="NO" id="nGf-UZ-2RP">
+                                <rect key="frame" x="630" y="876" width="118" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="b6f-5u-e9c"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="32l-VC-gEE" id="Ajz-Ae-RIO"/>
+                        <outlet property="swipe" destination="nGf-UZ-2RP" id="N1p-qD-Q0o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sM7-SD-rnx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="995" y="915"/>
+        </scene>
+        <!--TutorialViewControllerThird-->
+        <scene sceneID="DZ9-if-f5H">
+            <objects>
+                <viewController storyboardIdentifier="TutorialViewControllerThird" title="TutorialViewControllerThird" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Ac-km-hmv" customClass="TutorialViewControllerThird" customModule="ShareChance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sHU-Eq-9R9">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gB-aq-yPl">
+                                <rect key="frame" x="410" y="762" width="358" height="424"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="閉じる"/>
+                                <connections>
+                                    <action selector="CloseWithSender:" destination="7Ac-km-hmv" eventType="touchUpInside" id="e7C-Go-Kbh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XsL-c8-fXu">
+                                <rect key="frame" x="0.0" y="760" width="402" height="424"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="次回以降表示しない">
+                                    <color key="titleColor" red="1" green="0.32129776610578142" blue="0.30646673095091892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AlwaysCloseWithSender:" destination="7Ac-km-hmv" eventType="touchUpInside" id="IhT-be-5j0"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ykp-I3-2CU">
+                                <rect key="frame" x="177" y="104" width="414" height="424"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="趣味の輪を広げよう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdG-Gw-x1r">
+                                <rect key="frame" x="0.0" y="575" width="768" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.70979756116867065" green="0.1626637876033783" blue="0.087856300175189972" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qgh-3C-FKK">
+                                <rect key="frame" x="92" y="687" width="584" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">趣味に合わせて楽しみ方は無限大。
+さっそくShareChanceを始めましょう！</string>
+                                <color key="textColor" red="0.70979756116867065" green="0.1626637876033783" blue="0.087856300175189972" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pMw-yt-QBo"/>
+                    </view>
+                    <connections>
+                        <outlet property="AlwaysCloseButton" destination="XsL-c8-fXu" id="iua-KQ-evP"/>
+                        <outlet property="CloseButton" destination="2gB-aq-yPl" id="Cxu-zo-FSr"/>
+                        <outlet property="imageView" destination="ykp-I3-2CU" id="smy-aR-lAf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJ5-GS-N9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1771.875" y="914.06249999999989"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="swipe" width="1600" height="1200"/>
+    </resources>
+</document>

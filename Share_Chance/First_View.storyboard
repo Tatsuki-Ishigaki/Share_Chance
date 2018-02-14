@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Yh-T8-UFm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Yh-T8-UFm">
                                 <rect key="frame" x="0.0" y="13" width="768" height="975"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -98,11 +98,20 @@
                     <navigationItem key="navigationItem" id="eS0-ax-lTb" userLabel="wcl；え"/>
                     <connections>
                         <outlet property="tableView" destination="5Yh-T8-UFm" id="ZWr-Le-rDR"/>
+                        <segue destination="Trm-Wu-6eM" kind="show" identifier="First_2" id="Kx8-eK-fu8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kb9-sG-Ehi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1002.34375" y="106.640625"/>
+        </scene>
+        <!--First_View_2-->
+        <scene sceneID="BlK-30-frP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="First_View_2" id="Trm-Wu-6eM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m90-2X-oeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876" y="93"/>
         </scene>
         <!--チャット-->
         <scene sceneID="S4L-AH-Lza">

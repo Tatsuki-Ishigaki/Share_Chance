@@ -9,16 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Storyboard Reference-->
-        <scene sceneID="eIY-Yp-kl3">
-            <objects>
-                <viewControllerPlaceholder id="QEj-ga-R7I" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="fla-Bk-3Rs"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hdp-HM-Zap" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="526" y="-287"/>
-        </scene>
         <!--First_View-->
         <scene sceneID="9Wi-cN-SmG">
             <objects>
@@ -42,7 +32,6 @@
                         <segue destination="qd1-k3-LOP" kind="relationship" relationship="viewControllers" id="ujZ-4b-MMC"/>
                         <segue destination="Y4F-nz-dfJ" kind="relationship" relationship="viewControllers" id="Pq6-SN-afx"/>
                         <segue destination="tEh-44-dYl" kind="relationship" relationship="viewControllers" id="xsz-6y-ryn"/>
-                        <segue destination="QEj-ga-R7I" kind="relationship" relationship="viewControllers" id="aT5-al-sUY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHs-fh-D8y" userLabel="First Responder" sceneMemberID="firstResponder"/>
