@@ -107,7 +107,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         performSegue(withIdentifier: "First_2",sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.identifier == "First_2") {
+        let nextvc = FirstView_2Controller()
+        self.present(nextvc, animated: true,completion: nil)
+//        if (segue.identifier == "First_2") {
 //            let nav = segue.destination as! UINavigationController
             
 //            let First_2VC1 = nav.topViewController as! FirstView_2Controller
@@ -128,7 +130,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //            First_2VC7.flag = flag
             
             
-        }
+//        }
     }
     
 }

@@ -24,9 +24,9 @@ class FirstView_2Controller: JSQMessagesViewController {
     
     //ID作成
     //自分ID
-    var ida = "8888"
+    var ida = "9999"
     //相手ID
-    var idb = "9999"
+    var idb = "8888"
     
     var rid = "8888_9999"
     
@@ -87,9 +87,9 @@ class FirstView_2Controller: JSQMessagesViewController {
         button.addTarget(self, action: #selector(FirstView_2Controller.changeColor(sender: )), for: .touchUpInside)
         view.addSubview(button)
         //相手
-        senderDisplayName = "Test"
+        senderDisplayName = "Tatsuki"
         //自分
-        senderId = "Tatsuki"
+        senderId = "Test"
         let ref = Database.database().reference()
         ref.observe(.value, with: { snapshot in
             guard let dic = snapshot.value as? Dictionary<String, AnyObject> else {
