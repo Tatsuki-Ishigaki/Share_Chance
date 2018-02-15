@@ -107,7 +107,11 @@ class ThirdView_2Controller: UIViewController {
         
         let pr = inf[0].pr
         
-        let send_item:String = itemTitle! + "," + itemCategory! + "," + itemLike!
+        var number = (Int)(arc4random_uniform(UInt32(item.count)))
+        
+        var send_item = item![number].title + "," + item![number].category + "," + item![number].like
+        
+        print(send_item)
 
         let send_inf:String =  id + "," + name + "," + pr
         

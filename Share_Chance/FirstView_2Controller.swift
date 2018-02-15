@@ -43,7 +43,7 @@ class FirstView_2Controller: JSQMessagesViewController {
         inputToolbar.contentView.textView.text = ""
         let ref = Database.database().reference()
         
-        SelfIntroduction = "---自動送信(自己紹介から)" + "---"
+//        SelfIntroduction = "---自動送信(自己紹介から)" + "---"
         
 //        let flag_int = (Int)(flag!)
 //        if  flag_int == 0 {

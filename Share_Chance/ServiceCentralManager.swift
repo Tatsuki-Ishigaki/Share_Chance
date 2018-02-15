@@ -166,18 +166,18 @@ extension ServiceCentralManager: CBCentralManagerDelegate, CBPeripheralDelegate 
         if (information.count==0) {
             judge = true
         }else if (information.count==1){
-            inf_id.append(information[0].id)
+            inf_id.append(information[0].mach)
             
-            if(inf_id.contains(rid!) == false){
+            if(inf_id.contains(arr2[0]) == false){
                 judge = true
             }else{
                 judge = false
             }
         }else{
             for i in 0...(information.count-1){
-                inf_id.append(information[i].id)
+                inf_id.append(information[i].mach)
             }
-            if(inf_id.contains(rid!) == false){
+            if(inf_id.contains(arr2[0]) == false){
                 judge = true
             }else{
                 judge = false

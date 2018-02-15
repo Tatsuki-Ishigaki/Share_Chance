@@ -12,7 +12,7 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     var editingTextField: UITextField!
     
-    var pickOption = ["テレビ", "音楽", "スポーツ","芸能人","その他"]
+    var pickOption = ["テレビ", "音楽", "スポーツ","芸能人","食べ物","動物","その他"]
     
     var pickOption2 = ["ちょっと好き", "好き", "とても好き", "1番好き", "愛してる"]
     
