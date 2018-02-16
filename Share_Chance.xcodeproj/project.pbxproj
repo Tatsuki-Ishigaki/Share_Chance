@@ -106,7 +106,6 @@
 		BAB208361FDF906100002D03 /* Share_ChanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share_ChanceTests.swift; sourceTree = "<group>"; };
 		BAB208381FDF906100002D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAB2083D1FDF906100002D03 /* Share_ChanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Share_ChanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAB8E95A2036B88700BCA27B /* チームF.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "チームF.pptx"; sourceTree = "<group>"; };
 		BAD7698D2034C7A600412A9D /* JSQMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSQMessages.framework; path = Carthage/Build/iOS/JSQMessages.framework; sourceTree = "<group>"; };
 		BAD769912034C8F300412A9D /* FirstView_2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView_2Controller.swift; sourceTree = "<group>"; };
 		BAD769932034CAB300412A9D /* First_View_2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = First_View_2.storyboard; sourceTree = "<group>"; };
@@ -214,7 +213,6 @@
 				BAB208281FDF906100002D03 /* Assets.xcassets */,
 				BAD769972034F57300412A9D /* GoogleService-Info.plist */,
 				BAB2082D1FDF906100002D03 /* Info.plist */,
-				BAB8E95A2036B88700BCA27B /* チームF.pptx */,
 			);
 			path = Share_Chance;
 			sourceTree = "<group>";
